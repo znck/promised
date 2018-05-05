@@ -1,4 +1,5 @@
-import { promisify, CustomPromisify } from 'util'
+import { CustomPromisify } from 'util'
+import { resolve } from 'path';
 
 export type FunctionProxy<T extends Function> = CustomPromisify<T>
 
@@ -30,4 +31,27 @@ function promisedFunction<T extends Function>(fn: T): CustomPromisify<T> | T {
       return fn.apply(_this, args)
     }
   })
+}
+
+function promisify(fn: Function): Function {
+  try {
+    return require('util').promisify(fn)
+  } catch (e) {
+    return function (...args: any[]) {
+      return new Promise((resolve, reject) => {
+        try {
+          fn.call(this, ...args, (error: Error | undefined | null, ...values: any[]) => {
+            if (error) reject(error)
+            else if (values.length > 1) {
+              resolve(values)
+            } else {
+              resolve(values[0])
+            }
+          })
+        } catch(e) {
+          reject(e)
+        }
+      })
+    }
+  }
 }
