@@ -13,10 +13,7 @@
     "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/znck/promised.git"
-  },
+  "repository": "https://github.com/znck/promised",
   "keywords": [
     "promise",
     "callback"
