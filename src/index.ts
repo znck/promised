@@ -1,5 +1,4 @@
 import { CustomPromisify } from 'util'
-import { resolve } from 'path';
 
 export type FunctionProxy<T extends Function> = CustomPromisify<T>
 
