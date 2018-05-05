@@ -9,7 +9,7 @@
     "build": "tsc",
     "test": "jest",
     "prepublishOnly": "npm run build",
-    "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
+    "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
   },
   "repository": {
