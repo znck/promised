@@ -24,7 +24,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: pnpm --shameless-flatten --force install --frozen-shrinkwrap
+      - run: pnpm install --shamefully-flatten --frozen-shrinkwrap --force
 
       - save_cache:
           paths:
