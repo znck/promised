@@ -1,0 +1,40 @@
+{
+  "name": "@znck/promised",
+  "version": "0.0.0",
+  "description": "A utility to convert callbacks to promises.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "npm test",
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znck/promised.git"
+  },
+  "keywords": [
+    "promise",
+    "callback"
+  ],
+  "author": "Rahul Kadyan <hi@znck.me> (https://znck.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/znck/promised/issues"
+  },
+  "homepage": "https://github.com/znck/promised#readme",
+  "engine": "node >= 6.0.0",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.4",
+    "conventional-changelog": "^1.1.24",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
+  }
+}
