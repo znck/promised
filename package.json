@@ -6,13 +6,13 @@
   "module": "dist/promised.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prebuild": "npm test",
-    "build": "rollup -c",
+    "build": "npm run build",
     "test": "jest",
     "coveralls": "coveralls",
+    "release": "standard-version -a",
     "prepublishOnly": "npm run build",
-    "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags"
+    "pre:build": "npm test",
+    ":build": "rollup -c"
   },
   "repository": "https://github.com/znck/promised",
   "keywords": [
@@ -32,11 +32,11 @@
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "@types/node": "^10.12.18",
-    "conventional-changelog": "^3.0.5",
     "coveralls": "^3.0.2",
     "jest": "^23.6.0",
     "rollup": "^1.1.0",
     "rollup-plugin-typescript2": "^0.18.1",
+    "standard-version": "^4.4.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
   }
