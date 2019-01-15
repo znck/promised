@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.4"></a>
+## <small>1.0.4 (2019-01-15)</small>
+
+* fix: publish source map ([c7733d1](https://github.com/znck/promised/commit/c7733d1))
+
+
+
 <a name="1.0.3"></a>
 ## <small>1.0.3 (2019-01-15)</small>
 
