@@ -37,7 +37,7 @@ it('should not promisify if called with correct arguments', () => {
   expect(promised(target).norm()).toBe('value')
 })
 it('should not promisify if called with callback', (done) => {
-  promised(target).normWithFunction((value) => {
+  promised(target).normWithFunction((value: string ) => {
     expect(value).toBe('value')
     done()
   })

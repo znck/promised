@@ -2,11 +2,12 @@
   "name": "@znck/promised",
   "version": "1.0.0",
   "description": "A utility to convert callbacks to promises.",
-  "main": "dist/index.js",
+  "main": "dist/promised.js",
+  "module": "dist/promised.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "npm test",
-    "build": "tsc",
+    "build": "rollup -c",
     "test": "jest",
     "coveralls": "coveralls",
     "prepublishOnly": "npm run build",
@@ -29,12 +30,14 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.0.4",
-    "conventional-changelog": "^1.1.24",
-    "coveralls": "^3.0.1",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.4",
-    "typescript": "^2.8.3"
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "conventional-changelog": "^3.0.5",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-typescript2": "^0.18.1",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
   }
 }
