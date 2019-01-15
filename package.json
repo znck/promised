@@ -13,7 +13,8 @@
     "prepublishOnly": "npm run build",
     "pre:release": "npm run test",
     ":release": "standard-version -a",
-    "pre:build": "npm test",
+    "post:release": "git push --follow-tags origin master && npm publish",
+    "pre:build": "npm test && rm -rf dist",
     ":build": "rollup -c"
   },
   "repository": "https://github.com/znck/promised",
