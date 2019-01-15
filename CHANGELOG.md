@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.2"></a>
+## <small>1.0.2 (2019-01-15)</small>
+
+* chore: fix build script ([1ccbdb3](https://github.com/znck/promised/commit/1ccbdb3))
+
+
+
 <a name="1.0.1"></a>
 ## <small>1.0.1 (2019-01-15)</small>
 
