@@ -1,6 +1,6 @@
 {
   "name": "@znck/promised",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility to convert callbacks to promises.",
   "main": "dist/promised.js",
   "module": "dist/promised.mjs",
