@@ -6,11 +6,13 @@
   "module": "dist/promised.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run build",
+    "build": "npm run :build",
+    "release": "npm run :release",
     "test": "jest",
     "coveralls": "coveralls",
-    "release": "standard-version -a",
     "prepublishOnly": "npm run build",
+    "pre:release": "npm run test",
+    ":release": "standard-version -a",
     "pre:build": "npm test",
     ":build": "rollup -c"
   },
